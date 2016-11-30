@@ -8,6 +8,12 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeshikJanz/dashbouqet"
+  },
+  "author": "Alex",
+  "license": "MIT",
   "dependencies": {
     "@kadira/storybook": "^2.33.0",
     "babel-core": "^6.18.2",
@@ -37,8 +43,6 @@
     "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.13.2"
   },
-  "author": "Alex",
-  "license": "my",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "file-loader": "^0.9.0",
