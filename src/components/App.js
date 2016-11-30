@@ -23,7 +23,7 @@ class App extends Component {
             </div>
         )
     }
-};ç
+};
 
 //Все что из этой функции возвращается - хранится в this.props.
 export default connect(  //Получает store из provider и помещает в this.props

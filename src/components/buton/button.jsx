@@ -7,8 +7,14 @@ class Button extends Component {
   render() {
     const { text } = this.props;
 
+    const className = {
+      'button': true,
+      'buton_text': text,
+      'buton_without_text': !text,
+    };
+
     return(
-      <button className='button'>{text}</button>
+      <button className={cx(className)}>{text}</button>
     );
   }
 

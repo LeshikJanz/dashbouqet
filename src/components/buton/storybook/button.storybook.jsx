@@ -3,11 +3,11 @@ import { storiesOf } from '@kadira/storybook';
 import Button from '../button';
 
 const props = {
-  text: 'Click me'
+  text: '123'
 };
 
-storiesOf('Button', module)
-  .add('Button with text', () => (
+storiesOf('App', module)
+  .add('Button text', () => (
     <Button {...props} />
   ));
 
