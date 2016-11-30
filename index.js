@@ -21,19 +21,19 @@ function playlist(state = initialState, action = "") {  //reducer
     return state;
 }
 
-const store = createStore(playlist);  //в store будут храниться все данные
+const store = createStore(playlist, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());  //в store будут храниться все данные
 
 ReactDOM.render(
     <Provider store={store}><App/></Provider>,
 document.getElementById('root')
 );
 
-const addTrackBtn = document.querySelector('.addClass');  //находим класс addTrack
-addTrackBtn.addEventListener('click', () => {
-    let trackName = document.querySelectorAll('.trackInput')[0].value;
-    store.dispatch({ type: 'ADD_TRACK', payload: trackName });
-    document.querySelector('.trackInput').value = "";
-})
+//const addTrackBtn = document.querySelector('.addClass');  //находим класс addTrack
+//addTrackBtn.addEventListener('click', () => {
+//    let trackName = document.querySelectorAll('.trackInput')[0].value;
+//    store.dispatch({ type: 'ADD_TRACK', payload: trackName });
+//    document.querySelector('.trackInput').value = "";
+//})
 
 ////console.log(store.getState());  //выведет текущее состояние
 //
