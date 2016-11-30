@@ -1,14 +1,8 @@
 const path = require('path');
-const rootDir = path.resolve('../src');
 
 module.exports = {
 
   module: {
-    resolve: {
-      root: rootDir,
-      modulesDirectories: ['node_modules', 'src'],
-      extensions: ['', '.js', '.jsx']
-    },
     loaders: [
 
       // load and compile javascript
@@ -32,6 +26,13 @@ module.exports = {
       { test: /\.(png|jpg)$/, loader: 'file-loader?name=img/[name].[ext]'}
 
     ]
+  },
+
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+    alias: {
+      src: path.resolve('./src'),
+    },
   }
 
 };
