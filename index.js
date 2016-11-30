@@ -4,24 +4,12 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux'; //импортировали функцию createStore
 
 import App from './src/components/App';
+import reducer from './src/reducers';
 
 
-const initialState = [
-    'Smells like spirit',
-    'Enter Sandman'
-]
 
-function playlist(state = initialState, action = "") {  //reducer
-    if (action.type === 'ADD_TRACK') {
-        return [  //возвращаем новый массив
-            ...state,  //оператор spread, т.е. данные из св-ва state берутся старые
-            action.payload //Т.е. добавляем знач в массив и возвращаем массив(уже с новыми и старыми данными)
-        ]
-    }
-    return state;
-}
 
-const store = createStore(playlist, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());  //в store будут храниться все данные
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());  //в store будут храниться все данные
 
 ReactDOM.render(
     <Provider store={store}><App/></Provider>,
